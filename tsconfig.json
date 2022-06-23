@@ -28,7 +28,6 @@
 			"@shared/*": ["src/shared/*"]
 		},
 		"types": ["node"],
-		"lib": ["esnext", "dom", "scripthost"]
-	},
-	"exclude": ["node_modules", "*.js"]
+		"lib": ["esnext", "scripthost"]
+	}
 }

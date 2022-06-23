@@ -1,8 +1,7 @@
 {
-	"name": "danielturichdotcomapi",
+	"name": "apimonorepo",
 	"version": "1.0.0",
 	"private": false,
-	"license": "Unlicense",
 	"description": "Monorepo containing my website and discord bots APIs",
 	"author": {
 		"email": "packagejson@danielTurcich.com",
@@ -11,6 +10,8 @@
 	},
 	"type": "module",
 	"scripts": {
+		"lint-fix": "eslint '**/*.ts' --fix",
+		"format-check": "prettier --write --check '**/**'",
 		"website:serve": "cd ./src/danielTurcichComApi/ && pnpm serve",
 		"bot:serve": "cd ./src/buffetBotJsApi/ && pnpm serve",
 		"misc:serve": "cd ./src/miscApi/ && pnpm serve",
@@ -18,23 +19,23 @@
 	},
 	"dependencies": {
 		"@octokit/request": "^5.6.3",
-		"fastify": "^3.29.0",
+		"fastify": "^4.1.0",
 		"fastify-cors": "^6.1.0",
 		"file-system": "^2.2.2",
 		"googleapis": "39.2.0",
 		"snoowrap": "^1.23.0"
 	},
 	"devDependencies": {
-		"@octokit/types": "^6.34.0",
-		"@types/node": "^17.0.31",
+		"@octokit/types": "^6.37.0",
+		"@types/node": "^18.0.0",
 		"@types/request": "^2.48.8",
-		"@typescript-eslint/eslint-plugin": "^5.22.0",
-		"@typescript-eslint/parser": "^5.22.0",
-		"eslint": "^8.14.0",
+		"@typescript-eslint/eslint-plugin": "^5.29.0",
+		"@typescript-eslint/parser": "^5.29.0",
+		"eslint": "^8.18.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.0.0",
 		"google-auth-library": "3.1.2",
-		"prettier": "^2.6.2",
-		"typescript": "^4.6.4"
+		"prettier": "^2.7.1",
+		"typescript": "^4.7.4"
 	}
 }
